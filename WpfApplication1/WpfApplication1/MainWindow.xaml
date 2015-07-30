@@ -1,0 +1,26 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="500" Name="myMain">
+    <Grid>
+        <DockPanel Name="menu" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <Menu Foreground="#7ABDFF" BorderThickness="0" Background="#3C3C3C" DockPanel.Dock="Top">
+                <MenuItem Header="_File">
+                    <MenuItem Header="_Open"/>
+                    <MenuItem Header="_Close project" Click="close"/>
+                    <MenuItem Header="_Save" Click="save"/>
+                </MenuItem>
+            </Menu>
+            <ListBox Name="myList" Foreground="#7ABDFF" Background="#3C3C3C" Width="100">
+                <ListBoxItem Name="element" Content="classe"/>
+                <ListBoxItem Name="element2" Content="abstrait" />
+                <ListBoxItem Name="element3" Content="liaison"/>
+            </ListBox>
+            <Canvas Name="back" Background="#D1D1D1" MouseLeftButtonDown="click">
+                <Canvas Name="myCav" Canvas.Left="50" Canvas.Top=" 50" Background="Red" Visibility="Visible" Width="10" Height="10" >
+                    <Label Name="myLab" Content="Label" FontSize="16"/>
+                </Canvas>
+            </Canvas>
+        </DockPanel>
+    </Grid>
+</Window>
